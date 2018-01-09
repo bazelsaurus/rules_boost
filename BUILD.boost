@@ -1,4 +1,4 @@
-load("@com_github_nelhage_boost//:boost/boost.bzl", "boost_library")
+load("@rules_boost//:boost/boost.bzl", "boost_library")
 
 boost_library(
     name = "algorithm",
@@ -222,6 +222,15 @@ boost_library(
         ":core",
         ":intrusive",
         ":move",
+    ],
+)
+
+boost_library(
+    name = "context",
+    deps = [
+        ":assert",
+        ":config",
+        ":thread",
     ],
 )
 
