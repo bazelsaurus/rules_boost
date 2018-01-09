@@ -246,6 +246,15 @@ boost_library(
 )
 
 boost_library(
+    name = "crc",
+    deps = [
+        ":config",
+        ":integer",
+        ":limits",
+    ],
+)
+
+boost_library(
     name = "cstdint",
 )
 
